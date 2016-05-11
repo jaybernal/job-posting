@@ -1,0 +1,26 @@
+
+
+<%= form_for @user do |u| %>
+
+  <% if u.object.errors.any? %>
+    <% u.object.errors.full_messages.each do |e| %>
+      <%= e %>
+    <% end %>
+   <% end %>
+
+  <div>
+    <%= u.label :email %>
+    <%= u.text_field :email %>
+  </div>
+  <div>
+    <%= u.label :password %>
+    <%= u.password_field :password %>
+  </div>
+  <div>
+    <%= u.label :password_confirmation %>
+    <%= u.password_field :password_confirmation %>
+  </div>
+  <div>
+    <%= u.submit %>
+  </div>
+<% end %>
