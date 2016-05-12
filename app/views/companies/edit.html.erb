@@ -1,0 +1,33 @@
+<h1>Companies#edit</h1>
+
+
+  <%= form_for @company do |c|%>
+    <div>
+      <%= c.label :name %>
+      <%= c.text_field :name %>
+    </div>
+    <div>
+      <%= c.label :Company_Image %>
+      <%= c.text_field :image %>
+    </div>
+    <div>
+      <%= c.label :benefit %>
+      <%= c.text_area :benefit, size: "60x12" %>
+    </div>
+    <div>
+      <%= c.label :location %>
+      <%= c.text_field :location  %>
+    </div>
+    <div>
+      <%= c.label :website_address %>
+      <%= c.url_field :website %>
+    </div>
+    <div>
+      <%= c.label :about_us %>
+      <%= c.text_area :about_us, size: "60x12" %>
+    </div>
+  <%= c.submit %>
+
+
+<%= link_to "Delete Company", :company, method: :delete %>
+<% end %>

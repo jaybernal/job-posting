@@ -4,4 +4,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :require_login
+
+  private
+  def not_authenticated
+    redirect_to login_path, alert: "Please login first"
+  end
+end
+
+class ActionController::TestCase
+  include Sorcery::TestHelpers::Rails::Integration
+  include Sorcery::TestHelpers::Rails::Controller
 end
