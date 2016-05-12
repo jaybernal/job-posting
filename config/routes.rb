@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  root "users#index"
-  
+  resources :jobs
   resources :companies
   resources :users, only: [:new, :show, :index, :create]
   resources :sessions, only: [:new, :create, :destroy]

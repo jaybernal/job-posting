@@ -1,0 +1,39 @@
+<h1>Create a new job posting</h1>
+
+<%= form_for @job do |j| %>
+  <div>
+    <%= j.label :Job_title %>
+    <%= j.text_field :title %>
+  </div>
+
+    <div>
+    <%= j.label :Company%>
+    <%= select("job", "company_id", Company.all.collect {|c| [ c.name, c.id ] }, {:include_blank => true}) %>
+  </div>
+
+  <div>
+    <%= j.label :Job_type %>
+    <%= j.text_field :job_type %>
+  </div>
+
+  <div>
+    <%= j.label :Pay %>
+    <%= j.text_field :pay %>
+  </div>
+
+  <div>
+    <%= j.label :Experience_Level %>
+    <%= j.text_field :experience %>
+  </div>
+
+  <div>
+    <%= j.label :Languages_Required %>
+    <%= j.text_field :languages %>
+  </div>
+
+  <div>
+    <%= j.label :How_to_apply %>
+    <%= j.text_field :apply %>
+  </div>
+<%= j.submit %>
+<% end %>

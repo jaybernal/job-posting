@@ -15,5 +15,5 @@ Company.create(name: "Cabela's", image: "http://www.cabelas.com/content/dam/asse
 Company.create(name: "MyRacePass", image: "http://www.myracepass.com/css/mrp/img_v2/sitelogo.png", benefit: "discounts off race stuff", location: "Lincoln, NE", website: "http://www.myracepass.com", about_us: "We are fun")
 
 
-Job.create(title: "Front-End Developer", company_id: Company.first, job_type: "Full-Time", pay: "35k-45k", experience: "Junior", languages: "CSS, JS, HTML")
-Job.create(title: "Back-End Developer", company_id: Company.first, job_type: "Full-Time", pay: "45k-50k", experience: "Junior", languages: "CSS, JS, HTML")
+Job.create(title: "Front-End Developer", company_id: 2, job_type: "Full-Time", pay: "35k-45k", experience: "Junior", languages: "CSS, JS, HTML")
+Job.create(title: "Back-End Developer", company_id: 2, job_type: "Full-Time", pay: "45k-50k", experience: "Junior", languages: "CSS, JS, HTML")

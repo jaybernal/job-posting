@@ -1,0 +1,14 @@
+<h1>Jobs#index</h1>
+
+<div>
+<% @jobs.each do |j| %>
+  <%= j.title %>
+  <%= j.company.name %>
+  <%= j.job_type %>
+  <%= j.pay %>
+  <%= j.experience %>
+  <%= j.languages %>
+  <%= j.apply %>
+
+</div>
+<% end %>
