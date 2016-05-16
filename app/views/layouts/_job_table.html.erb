@@ -1,6 +1,3 @@
-<h1 class="text-center">Current Job List</h1>
-
-
 <div class="container container-jobs">
   <div class="row">
     <table class="table table-condensed table-hover col-lg-6">
@@ -14,7 +11,7 @@
       </thead>
 
       <tbody>
-        <% @jobs.each do |j| %>
+        <% @company.jobs.each do |j| %>
         <tr>
           <td><%= j.title %></td>
           <td><%= j.company.name %></td>
@@ -48,10 +45,3 @@
     </table>
   </div>
 </div>
-
-
-
-
-
-
-
