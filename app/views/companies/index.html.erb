@@ -1,37 +1,20 @@
 <h1>Company List</h1>
 
-
-
-
-<table>
-  <thead>
-    <tr>
-      <th>Company Name</th>
-      <th>Location</th>
-      <th >Websites</th>
-      <th>Edit</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @companies.each do |c| %>
-    <tr>
-      <td><%= c.name %></td>
-      <td><%= c.location %></td>
-      <td><%= c.website %></td>
-      <td>Edit</td>
-    </tr>
-    <tr>
-      <th>Benefits</th>
-      <td colspan="4"><%= c.benefit %></td>
-    </tr>
-    <tr>
-      <th>About Us</th>
-      <td colspan="3"><%= c.about_us %></td>
-    </tr>
-
-    <% end %>
-  </tbody>
-</table>
-
-
+<div>
+ <% @companies.each do |c| %>
+ <div>
+  <div>
+    <div>
+      <div>
+        <img src="<%= c.image %>">
+      </div>
+      <div>
+        <p><a href="<%= c.website %>">Website</a></p>
+        <p><a href="#">Open Positions</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
 

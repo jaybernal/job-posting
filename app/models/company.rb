@@ -5,5 +5,5 @@ class Company < ActiveRecord::Base
   validates :location, presence: true
   validates :website, presence: true
 
-  has_many :postings
+  has_many :jobs
 end

@@ -1,0 +1,24 @@
+
+
+<div class="card text-center">
+  <img class="card-img-top" data-src="..." alt="Card image cap" <img src="<%= @job.company.image %>" alt="">
+  <div class="card-block">
+    <h3 class="card-title"><%= @job.title %></h3>
+    <p class="card-text"><%= @job.company.name  %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Pay: <%= @job.pay %></li>
+    <li class="list-group-item">Languages: <%= @job.languages %></li>
+    <li class="list-group-item">Job Type: <%= @job.job_type %></li>
+    <li class="list-group-item">Experience: <%= @job.experience %></li>
+    <li class="list-group-item">About us: <%= @job.company.about_us %></li>
+    <li class="list-group-item">Benefits: <%= @job.company.benefit %></li>
+  </ul>
+  <div class="card-block">
+
+    <p><%= link_to "Employer's Website", @job.company.website%></p>
+    <p><%= link_to "Employer's Profile Page", company_path(@job) %></p>
+  </div>
+</div>
+
+

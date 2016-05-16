@@ -15,5 +15,10 @@ Company.create(name: "Cabela's", image: "http://www.cabelas.com/content/dam/asse
 Company.create(name: "MyRacePass", image: "http://www.myracepass.com/css/mrp/img_v2/sitelogo.png", benefit: "discounts off race stuff", location: "Lincoln, NE", website: "http://www.myracepass.com", about_us: "We are fun")
 
 
-Job.create(title: "Front-End Developer", company_id: 2, job_type: "Full-Time", pay: "35k-45k", experience: "Junior", languages: "CSS, JS, HTML")
-Job.create(title: "Back-End Developer", company_id: 2, job_type: "Full-Time", pay: "45k-50k", experience: "Junior", languages: "CSS, JS, HTML")
+Job.create(title: "Front-End Developer", company: Company.second, job_type: "Full-Time", pay: "35k-45k", experience: "Junior", languages: "CSS, JS, HTML")
+Job.create(title: "Back-End Developer", company: Company.second, job_type: "Full-Time", pay: "45k-50k", experience: "Junior", languages: "CSS, JS, HTML")
+Job.create(title: "Ruby Developer", company: Company.first, job_type: "Full-Time", pay: "35k-40K", experience: "Intern", languages: "Ruby")
+Job.create(title: "C# Developer", company: Company.first, job_type: "Full-Time", pay: "35k-40K", experience: "Senior", languages: "C# and JS")
+Job.create(title: "C# Developer", company: Company.first, job_type: "Full-Time", pay: "35k-40K", experience: "Junior", languages: "C#")
+Job.create(title: "JavaScript Developer", company: Company.first, job_type: "Full-Time", pay: "35k-40K", experience: "Junior", languages: "JS")
+Job.create(title: "Wordpress Developer", company: Company.last, job_type: "Part-Time", pay: "35k-40K", experience: "Junior", languages: "WordPress, PHP, JQuery")

@@ -13,17 +13,25 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def edit
+    @company = Company.find(params[:id])
+  end
+
   def update
     @company = Company.find(params[:id])
     if @company.update_attributes(company_params)
-      redirect_to company_path, notice: "successful"
+      redirect_to company_path(@company), notice: "successful"
     else
       render :edit
     end
   end
 
-  def edit
+  def show
     @company = Company.find(params[:id])
+  end
+
+  def index
+    @companies = Company.all
   end
 
   def destroy
@@ -34,13 +42,6 @@ class CompaniesController < ApplicationController
     redirect_to companies_path, notice: "successful"
   end
 
-  def show
-    @company = Company.find(params[:id])
-  end
-
-  def index
-    @companies = Company.all
-  end
 
 
   private
