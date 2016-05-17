@@ -1,20 +1,20 @@
 <h1>Company List</h1>
 
-<div>
- <% @companies.each do |c| %>
- <div>
-  <div>
-    <div>
-      <div>
-        <img src="<%= c.image %>">
-      </div>
-      <div>
-        <p><a href="<%= c.website %>">Website</a></p>
-        <p><a href="#">Open Positions</a></p>
-      </div>
+<div class="card card-companies text-center">
+  <% @companies.each do |c| %>
+    <div class="card-border">
+      <img class="card-img-top" src="<%= c.image %>" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title"><%= c.name %></h4>
+      <p class="card-text">Location: <%= c.location%></p>
     </div>
-  </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">About Us: <%= c.about_us %></li>
+      </ul>
+    <div class="card-block">
+      <a href="<%= c.website %>" class="card-link"><%= c.name %> Site</a>
+       <p><%= link_to "Open Positions", company_path(c) %> (<%= c.jobs.count %>)</p>
+    </div>
+    </div>
+  <% end %>
 </div>
-<% end %>
-</div>
-

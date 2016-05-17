@@ -1,4 +1,5 @@
-<%= form_tag sessions_path do |f| %>
+<div class="sign-page">
+  <%= form_tag sessions_path do |f| %>
   <div>
     <%= label_tag :email %><br />
     <%= text_field_tag :email %>
@@ -10,4 +11,5 @@
   <div class="actions">
     <%= submit_tag "Login" %>
   </div>
-<% end %>
+  <% end %>
+</div>

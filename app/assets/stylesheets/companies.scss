@@ -1,3 +1,27 @@
 // Place all the styles related to the companies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.card-border{
+  border: 2px solid orange;
+  margin: 20px;
+  height: 25em;
+  width: 40em;
+  float: left;
+}
+
+.card-img-top{
+  width: 30em;
+  height: 5em;
+}
+
+.card-companies{
+  width: 100% !important;
+}
+
+.list-group-item{
+  width: 40em;
+  height: 10em;
+  background: none; 
+  border: none;
+}
