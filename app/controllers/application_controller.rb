@@ -15,10 +15,9 @@ class ApplicationController < ActionController::Base
       redirect_to company_path
     end
   end
-
-
-
 end
+
+
 
 class ActionController::TestCase
   include Sorcery::TestHelpers::Rails::Integration
