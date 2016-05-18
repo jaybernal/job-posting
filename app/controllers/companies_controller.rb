@@ -15,10 +15,12 @@ class CompaniesController < ApplicationController
 
   def edit
     @company = Company.find(params[:id])
+    user_access?
   end
 
   def update
     @company = Company.find(params[:id])
+    user_access? 
     if @company.update_attributes(company_params)
       redirect_to company_path(@company), notice: "successful"
     else

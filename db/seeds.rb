@@ -9,7 +9,7 @@
 
 User.create(email: "jjbernal@gmail.com", password: "gooddog", password_confirmation: "gooddog")
 User.create(email: "mbernal@gmail.com", password: "goodbaby", password_confirmation: "goodbaby")
-User.create(email: "demo@gmail.com" password: "gooddog", password_confirmation: "gooddog")
+User.create(email: "demo@gmail.com", password: "gooddog", password_confirmation: "gooddog")
 
 Company.create(name: "Aglix", image: "http://www.agilx.com/wp-content/uploads/2012/09/logo.png", benefit: "being awesome and working with awesome people", location: "Lincoln, NE", website: "http://www.agilx.com/", about_us: "Agilx is a software development team headquartered in the Technology Develop Center in Lincoln, NE. We love to write software and help our clients automate business process and solve complex problems. Call anytime to discuss your project, we would love to hear from you!", user_id: User.first)
 Company.create(name: "Cabela's", image: "http://www.cabelas.com/content/dam/assets/Cabelas/HomePage/2015/Q1/Main/cabelas_CLUB.png", benefit: "Discount of Guns and dead animals", location: "Lincoln, NE", website: "http://www.cabelas.com/", about_us: "Cabela's, the World's Foremost Outfitter of hunting, fishing and outdoor gear, was born somewhat inadvertently in 1961 when Dick Cabela came up with a plan to sell fishing flies he purchased while at a furniture show in Chicago. Upon returning home to Chappell, Nebraska, Dick ran a classified ad in the Casper, Wyoming, newspaper reading:", user_id: User.first)

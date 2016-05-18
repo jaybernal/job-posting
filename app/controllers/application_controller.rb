@@ -9,6 +9,15 @@ class ApplicationController < ActionController::Base
   def not_authenticated
     redirect_to login_path, alert: "Please login first"
   end
+
+  def user_access? 
+    if @user != current_user
+      redirect_to company_path
+    end
+  end
+
+
+
 end
 
 class ActionController::TestCase
