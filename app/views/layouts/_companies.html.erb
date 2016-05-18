@@ -1,6 +1,6 @@
 <div class="row">
-  <div class="card card-companies text-center">
-    <div class="card-border companies-show">
+  <div class="card text-center">
+    <div class="card-border">
       <img class="card-img-top" src="<%= @company.image %>" alt="Card image cap">
       <div class="card-block">
         <h4 class="card-title"><%= @company.name %></h4>
@@ -8,8 +8,8 @@
         <a href="<%= @company.website %>" class="card-link"><%= @company.name %> Site</a>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">About Us: <%= @company.about_us %></li>
-        <li class="list-group-item">Benefits: <%= @company.benefit %></li>
+        <li class="list-group-item companies-show-list">About Us: <%= @company.about_us %></li>
+        <li class="list-group-item companies-show-list">Benefits: <%= @company.benefit %></li>
       </ul>
     </div>
   </div>

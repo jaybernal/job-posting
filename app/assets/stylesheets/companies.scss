@@ -2,26 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.card-border{
+.companies-show{
   border: 2px solid orange;
   margin: 20px;
   height: 25em;
   width: 40em;
-  float: left;
 }
 
 .card-img-top{
-  width: 30em;
+  max-width: 30em;
   height: 5em;
 }
 
 .card-companies{
   width: 100% !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.list-group-item{
+.companies-list{
   width: 40em;
   height: 10em;
   background: none; 
   border: none;
+  text-align: center;
+}
+
+.companies-show-list{
+  background: none; 
+  border: none;
+}
+.index-companies-list{
+  margin: auto
+}
+
+.companies-border{
+  -webkit-box-shadow: 10px 9px 11px 3px rgba(166,156,156,1);
+  -moz-box-shadow: 10px 9px 11px 3px rgba(166,156,156,1);
+  box-shadow: 10px 9px 11px 3px rgba(166,156,156,1);
+  margin: 4em; 
 }

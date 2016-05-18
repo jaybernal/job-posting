@@ -1,15 +1,15 @@
-<h1>Company List</h1>
+<h1 class="text-center">Company List</h1>
 
 <div class="card card-companies text-center">
   <% @companies.each do |c| %>
-    <div class="card-border">
+    <div class="card-border companies-border">
       <img class="card-img-top" src="<%= c.image %>" alt="Card image cap">
     <div class="card-block">
       <h4 class="card-title"><%= c.name %></h4>
       <p class="card-text">Location: <%= c.location%></p>
     </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">About Us: <%= c.about_us %></li>
+        <li class="list-group-item companies-list index-companies-list">About Us: <%= c.about_us %></li>
       </ul>
     <div class="card-block">
       <a href="<%= c.website %>" class="card-link"><%= c.name %> Site</a>
