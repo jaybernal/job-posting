@@ -6,4 +6,5 @@ class Company < ActiveRecord::Base
   validates :website, presence: true
 
   has_many :jobs
+  has_many :user_id
 end

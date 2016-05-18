@@ -9,4 +9,6 @@ class User < ActiveRecord::Base
     if: -> { new_record? || changes[:crypted_password] }
 
   validates :email, uniqueness: true
+
+  belongs_to :company
 end
