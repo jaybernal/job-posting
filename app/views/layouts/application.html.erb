@@ -16,14 +16,15 @@
 
 </head>
 
+<%= render(:partial => "layouts/nav_bar") %>
+
 <body>
   <nav>
     <% if current_user %>
     <p>Logged in as <%= current_user.email %></p>
-    <button type="button" class="btn btn-default navbar-btn"><%= link_to "Logout", logout_path %></button>
+      <button type="button" class="btn btn-default navbar-btn"><%= link_to "Logout", logout_path %></button>
     <% else %>
-    
-    <button type="button" class="btn btn-default navbar-btn"><%= link_to "Login", login_path %></button>
+      <button type="button" class="btn btn-default navbar-btn"><%= link_to "Login", login_path %></button>
     <% end %>
   </nav>
   <section>
