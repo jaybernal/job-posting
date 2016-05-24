@@ -19,7 +19,3 @@ end
 
 
 
-class ActionController::TestCase
-  include Sorcery::TestHelpers::Rails::Integration
-  include Sorcery::TestHelpers::Rails::Controller
-end
