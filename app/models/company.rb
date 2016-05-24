@@ -6,6 +6,6 @@ class Company < ActiveRecord::Base
   validates :website, presence: true
 
   has_many :jobs
-  belongs_to :user, :foreign_key => "user_id"
+  belongs_to :user
 
 end
