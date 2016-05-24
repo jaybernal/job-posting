@@ -50,8 +50,6 @@ class CompaniesController < ApplicationController
     redirect_to companies_path, notice: "successful"
   end
 
-
-
   private
     def company_params
       params.require(:company).permit(:name, :image, :benefit, :location, :website, :about_us)     

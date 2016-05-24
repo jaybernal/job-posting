@@ -5,7 +5,7 @@ class Company < ActiveRecord::Base
   validates :location, presence: true
   validates :website, presence: true
 
-  has_many :jobs
+  has_many :jobs, dependent: :destroy
   belongs_to :user
 
 end
