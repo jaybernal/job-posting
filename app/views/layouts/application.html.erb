@@ -15,17 +15,9 @@
   <%= csrf_meta_tags %>   
 
 </head>
-
-<%= render(:partial => "layouts/nav_bar") %>
-
 <body>
+  <%= render(:partial => "layouts/nav_bar") %>
   <nav>
-    <% if current_user %>
-    <p>Logged in as <%= current_user.email %></p>
-      <button type="button" class="btn btn-default navbar-btn"><%= link_to "Logout", logout_path %></button>
-    <% else %>
-      <button type="button" class="btn btn-default navbar-btn"><%= link_to "Login", login_path %></button>
-    <% end %>
   </nav>
   <section>
   <%= yield %>
