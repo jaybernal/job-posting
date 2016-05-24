@@ -13,10 +13,14 @@ class UsersController < ApplicationController
   end
 
   def show
+    # TODO: users probably shouldn't be able to see each other except in special
+    # circumstances
     @user = User.find(params[:id])
   end
 
   def index
+    # TODO: users probably shouldn't be able to access this index except in
+    # special circumstances
     @users = User.all
   end
 

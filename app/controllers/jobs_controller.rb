@@ -8,6 +8,7 @@ class JobsController < ApplicationController
     if @job.save
       redirect_to jobs_path, notice: "successful"
     else
+      flash.now[:alert] = "Couldn't create"
       render new_job_path
     end
   end
