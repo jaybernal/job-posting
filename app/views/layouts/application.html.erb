@@ -20,10 +20,10 @@
   <nav>
     <% if current_user %>
     <p>Logged in as <%= current_user.email %></p>
-    <p><%= link_to "Logout", logout_path %></p>
+    <button type="button" class="btn btn-default navbar-btn"><%= link_to "Logout", logout_path %></button>
     <% else %>
-    <p>Not logged in</p>
-    <p><%= link_to "Login", login_path %></p>
+    
+    <button type="button" class="btn btn-default navbar-btn"><%= link_to "Login", login_path %></button>
     <% end %>
   </nav>
   <section>
@@ -32,3 +32,5 @@
 </body>
 
 </html>
+
+

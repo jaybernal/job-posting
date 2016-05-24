@@ -1,10 +1,13 @@
 class CompaniesController < ApplicationController
   def new
     @company = Company.new
+    user_access?
   end
 
   def create
     @company = Company.new(company_params)
+    user_access?
+
     if @company.save
       redirect_to company_path(@company), notice: "successful"
     else
@@ -16,6 +19,7 @@ class CompaniesController < ApplicationController
   def edit
     @company = Company.find(params[:id])
     user_access?
+
   end
 
   def update
@@ -39,6 +43,8 @@ class CompaniesController < ApplicationController
   def destroy
     @company = Company.find(params[:id])
     @company.destroy
+    user_access?
+
     flash[:success] = "Company deleted"
 
     redirect_to companies_path, notice: "successful"

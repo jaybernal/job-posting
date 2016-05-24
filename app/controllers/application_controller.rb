@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   def user_access? 
-    if @user != current_user
+    if current_user != @company.user
       redirect_to company_path
     end
   end

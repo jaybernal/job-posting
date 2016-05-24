@@ -1,4 +1,4 @@
-<div class="sign-page">
+<div id="signInPage" class="sign-page-hidden">
   <%= form_tag sessions_path do |f| %>
   <div>
     <%= label_tag :email %><br />
@@ -14,7 +14,14 @@
   <% end %>
 </div>
 
+
+
+
 Users: 
 jjbernal@gmail.com => gooddog </br>
 mbernal@gmail.com => gooddog</br>
 demo@gmail.com => gooddog      
+
+
+
+<button id="signInButton" class="sign-page-appear" onclick="showLogin()">Login</button>

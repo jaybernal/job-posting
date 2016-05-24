@@ -3,11 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.sign-page{
+.sign-page-appear{
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.sign-page-hidden{
+  display: none;
 }
 
 body{
@@ -17,3 +21,4 @@ body{
   margin: 0;
   padding: 0;
 }
+
