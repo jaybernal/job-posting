@@ -1,6 +1,4 @@
 <h1 class="text-center">Current Job List</h1>
-
-
 <div class="container container-jobs">
   <div class="row">
     <table class="table table-condensed table-hover col-lg-6">
@@ -21,12 +19,9 @@
           <td><%= j.job_type %></td>
           <td><%= j.experience %></td>
           <td>
-           <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-         Details
-          </button>
-
-          <!-- Modal -->
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Details</button>
+           <!-- Modal -->
+           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -37,21 +32,15 @@
                   <%= render(:partial => "layouts/joblist", :locals => {:@job => j}) %>
                 </div>
                 <div class="modal-footer">
-
                 </div>
               </div>
             </div>
           </div>
-        </td>        
+        </td> 
+        <td><%=link_to "", job_path(j), :method =>:delete, class:"glyphicon glyphicon-trash" %></td> 
+        <td><%= link_to "", edit_job_path(j), class:"glyphicon glyphicon-pencil" %></td>
         <% end %>
       </tbody>
     </table>
   </div>
 </div>
-
-
-
-
-
-
-

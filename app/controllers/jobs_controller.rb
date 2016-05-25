@@ -1,6 +1,7 @@
 class JobsController < ApplicationController
   def new
     @job = Job.new
+
   end
 
   def create
@@ -15,6 +16,8 @@ class JobsController < ApplicationController
 
   def update
     @job = Job.find(params[:id])
+    user_access?
+
     if @job.update_attributes(job_params)
       redirect_to job_path
     end
@@ -22,6 +25,8 @@ class JobsController < ApplicationController
 
   def edit
     @job = Job.find(params[:id])
+    user_access?
+
   end
 
   def destroy
